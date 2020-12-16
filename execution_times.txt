@@ -1,0 +1,27 @@
+Z indexowaniem:
+    Dla 10 000:
+        Execution time for INSERTs in number of 1000: 64ms
+        Execution time for SELECT: 71ms
+        Execution time for UPDATE: 62ms
+    Dla 100 000:
+        Execution time for INSERTs in number of 100000: 1057ms
+        Execution time for SELECT: 229ms
+        Execution time for UPDATE: 69ms
+    Dla 1 000 000:
+        Execution time for INSERTs in number of 1000000: 9967ms
+        Execution time for SELECT: 513ms
+        Execution time for UPDATE: 239ms
+
+Bez indexowania:
+    Dla 10 000:
+        Execution time for INSERTs in number of 1000: 57ms
+        Execution time for SELECT: 151ms
+        Execution time for UPDATE: 72ms
+    Dla 100 000:
+        Execution time for INSERTs in number of 100000: 530ms
+        Execution time for SELECT: 137ms
+        Execution time for UPDATE: 81ms
+    Dla 1 000 000:
+        Execution time for INSERTs in number of 1000000: 4807ms
+        Execution time for SELECT: 528ms
+        Execution time for UPDATE: 218ms
