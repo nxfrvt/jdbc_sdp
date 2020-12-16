@@ -8,9 +8,14 @@ import java.util.Random;
 public class Query {
 
     public static void query(String query) throws SQLException{
+        Instant start = Instant.now();
         Connection c = establishConnection();
         Statement s = c.createStatement();
         s.execute(query);
+        Instant end = Instant.now();
+        String queryType = query.substring(0, query.indexOf(' '));
+        System.out.println("Execution time for " + queryType + ": " +
+                (Duration.between(start, end)).toMillis() + "ms");
     }
 
     public static ResultSet select(String selectQuery) throws SQLException {
@@ -43,8 +48,8 @@ public class Query {
         s.execute(query);
 
         Instant end = Instant.now();
-        System.out.println("Execution time for inserts in number of " + n + ": " +
-                (Duration.between(start, end)).toMillis());
+        System.out.println("Execution time for INSERTs in number of " + n + ": " +
+                (Duration.between(start, end)).toMillis() + "ms");
         }
 
 
